@@ -7,6 +7,18 @@
     {
       "nome": "Java",
       "id": 2
+    },
+    {
+      "nome": "angular Material",
+      "id": 3
+    },
+    {
+      "nome": "React Native",
+      "id": 4
+    },
+    {
+      "nome": "gsgeg",
+      "id": 5
     }
   ]
 }

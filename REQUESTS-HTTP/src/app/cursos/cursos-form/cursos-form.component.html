@@ -8,12 +8,12 @@
         id="nome"
         placeholder="Curso"
         formControlName="nome"
-        [ngClass]="{'is-invalid' : submitted && hasError('nome')}"
+        [ngClass]="{'is-invalid' : submitted && hasError('nome'), 'is-valid' : submitted && isValid('nome') }"
       />
       <div class="valid-feedback" *ngIf="hasError('nome') && hasError('nome')['required'] ">
         Informe o nome para o Curso.
       </div>
-      <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['minlength'] ">
+      <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['minlength'];else  ">
         Nome com minimo de {{hasError('nome')['minlength'].requiredLength}} caracteres.
       </div>
       <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['maxlength'] ">
@@ -24,4 +24,5 @@
 
   <button type="submit" class="btn btn-primary col-2" (click)="onSubmit()" >Salvar</button>
   <button type="button" class="btn btn-default col-2" (click)="onCancel()" >Cancelar</button>
+
 </form>
